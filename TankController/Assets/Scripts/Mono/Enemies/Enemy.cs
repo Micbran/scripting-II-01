@@ -14,14 +14,14 @@ public class Enemy : MonoBehaviour
         this.rb = GetComponent<Rigidbody>();
     }
 
-    void Start()
+    private void FixedUpdate()
     {
-        
+        Move();
     }
 
-    void Update()
+    private void Move()
     {
-        
+        return;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -35,13 +35,20 @@ public class Enemy : MonoBehaviour
         this.ImpactFeedback();
     }
 
-    private void PlayerImpact(Player player)
+    protected virtual void PlayerImpact(Player player)
     {
-
+        player.DecreaseHealth(this.damageAmount);
     }
 
-    private void ImpactFeedback()
+    protected void ImpactFeedback()
     {
-
+        if (this.collisionParticles != null)
+        {
+            this.collisionParticles = Instantiate(this.collisionParticles, this.transform.position, Quaternion.identity);
+        }
+        if (this.collisionSound != null)
+        {
+            AudioHelper.PlayClip2D(this.collisionSound, 1f);
+        }
     }
 }

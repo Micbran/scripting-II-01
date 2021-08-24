@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Kill()
+    public void Kill()
     {
         this.gameObject.SetActive(false);
         // fire kill events
