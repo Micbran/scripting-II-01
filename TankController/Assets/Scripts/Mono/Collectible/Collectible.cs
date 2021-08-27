@@ -8,6 +8,7 @@ public abstract class Collectible : MonoBehaviour
 
     [SerializeField] private ParticleSystem collectParticles;
     [SerializeField] private AudioClip collectAudio;
+    [SerializeField] private float clipVolume = 1f;
 
     private Rigidbody rb;
     protected Quaternion turnOffset;
@@ -53,7 +54,7 @@ public abstract class Collectible : MonoBehaviour
 
         if (this.collectAudio != null)
         {
-            AudioHelper.PlayClip2D(this.collectAudio, 1f);
+            AudioHelper.PlayClip2D(this.collectAudio, this.clipVolume);
         }
     }
 }

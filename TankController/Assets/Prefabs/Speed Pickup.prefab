@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd69b3db1f7f734abc43d9fb3001291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.33
-  collectParticles: {fileID: 0}
-  collectAudio: {fileID: 0}
+  movementSpeed: 0.5
+  collectParticles: {fileID: 3895204913805568777, guid: c623cc72ca3b9c146b9ce0cc958abb65, type: 3}
+  collectAudio: {fileID: 8300000, guid: dfdeab36fd99eae4c8689a9eeabc0d1b, type: 3}
   speedAmount: 3

@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
     {
         if (this.collisionParticles != null)
         {
-            this.collisionParticles = Instantiate(this.collisionParticles, this.transform.position, Quaternion.identity);
+            Instantiate(this.collisionParticles, this.transform.position, Quaternion.identity);
         }
         if (this.collisionSound != null)
         {

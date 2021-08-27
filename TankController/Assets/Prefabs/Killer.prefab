@@ -126,5 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  collisionParticles: {fileID: 0}
-  collisionSound: {fileID: 0}
+  collisionParticles: {fileID: 8495879324565392487, guid: 4eef0500b381adf41a97ecad358e6e38, type: 3}
+  collisionSound: {fileID: 8300000, guid: 3dd7ffa8b046abf4ca2833bfe947b795, type: 3}
